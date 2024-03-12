@@ -1,50 +1,10 @@
-/** Authors */
-
-const authors = [
-  {
-    name: "Homer",
-    text: "Homer is the author of the Iliad and the Odyssey.",
-  },
-  {
-    name: "Virgil",
-    text: "Virgil is the author of the Aeneid.",
-  },
-  {
-    name: "Ovid",
-    text: "Ovid is the author of the Metamorphoses.",
-  },
-  {
-    name: "Horace",
-    text: "Horace is the author of the Odes.",
-  },
-  {
-    name: "Caesar",
-    text: "Caesar is the author of the Gallic Wars.",
-  },
-];
+import { authors } from "./utils/authors.js";
+import { caesarCipher13 } from "./utils/cipher.js";
 
 /**
  * Cipher
  * https://en.wikipedia.org/wiki/Caesar_cipher
  */
-
-const input = /*  */ "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const output = /* */ "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-function caesarCipher13(string) {
-  return string
-    .split("")
-    .map((character) => {
-      // 💡 indexOf returns -1 if the character is not found
-      const index = input.indexOf(character);
-      if (index > -1) {
-        return output[index];
-      }
-
-      return character;
-    })
-    .join("");
-}
 
 /** Get root element */
 
