@@ -90,8 +90,8 @@ authors.forEach((author) => {
   text.textContent = caesarCipher13(author.text);
 
   const button = document.createElement("button");
-  button.className = "card__button";
   button.textContent = "Decipher";
+  button.type = "button";
   button.addEventListener("click", handleDecipherButtonClick);
 
   card.append(title, text, button);
